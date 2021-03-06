@@ -100,8 +100,23 @@
   .hero
     &-image
       left: -693px
+    &-form
+      flex-direction: column
+      max-width: 427px
+      &__input-group
+        width: 100%
+        margin-bottom: 25px
+        border-right: none
+        border-bottom: 1px solid rgba(0, 0, 0, .5)
+        &:first-child
+          border-left: none
+      &__select
+        padding: 0 8px 4px
+      &__button
+        margin-left: 0
 @media (max-width: 767px)
   .hero
+    padding-top: 15px
     &__top
       height: 392.71px
     &-image
@@ -110,3 +125,13 @@
       height: 392.71px
     &__phrase
       font-size: 18px
+    &__title
+      font-size: 36px
+      line-height: 53px
+@media (max-width: 576px)
+  .hero
+    &__top
+      margin-bottom: 30px
+    &__title
+      font-size: 26px
+      line-height: 38px
