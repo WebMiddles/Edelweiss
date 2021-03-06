@@ -20,6 +20,9 @@
       line-height: 120%
       text-transform: uppercase
       transition: all ease-out 0.3s
+      &_active
+        color: #fff
+        transition: all ease-out 0.3s
   &-burger
     display: flex
     flex-direction: column
@@ -31,6 +34,45 @@
       width: 100%
       background-color: $color-primary
       transition: all ease-out 0.3s
+      &_active
+        background-color: #fff
+  // Logo
+  &-logo
+    width: 165px
+    height: 65px
+    background-image: url("../img/header-logo.svg")
+    transition: all ease-out 0.3s
+    &_active
+      background-image: url("../img/header-logo_active.svg")
+      transition: all ease-out 0.3s
+  // Info
+  &-info
+    display: flex
+    align-items: center
+    &__phone
+      margin-right: 19px
+      font-style: normal
+      font-weight: 300
+      font-size: 14px
+      line-height: 159.5%
+      opacity: 0.5
+      transition: all ease-out 0.3s
+      &_active
+        color: #fff
+  &-social
+    display: flex
+    align-items: center
+    &__link
+      width: 25px
+      height: 25px
+      &:not(:last-child)
+        margin-right: 4px
+    &__icon
+      fill: #000
+      opacity: 0.5
+      transition: all ease-out 0.3s
+      &_active
+        fill: #fff
 
 // Mouse over effects
 @media (min-width: 993px)
@@ -41,3 +83,14 @@
     &-menu:hover .header-burger__line
       background-color: $color-secondary
       transition: all ease-out 0.3s
+    &-logo:hover
+      transform: translateY(-10px)
+      transition: all ease-out 0.3s
+    &-info
+      &__phone:hover
+        color: $color-secondary
+        transition: all ease-out 0.3s
+    &-social
+      &__link:hover .header-social__icon
+        fill: $color-secondary
+        transition: all ease-out 0.3s
