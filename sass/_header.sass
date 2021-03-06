@@ -1,0 +1,43 @@
+.header
+  &-wrapper
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 34px 0
+  // Menu button
+  &-menu
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 0
+    outline: none
+    border: none
+    background-color: transparent
+    cursor: pointer
+    &__text
+      margin-left: 19px
+      font-size: 14px
+      line-height: 120%
+      text-transform: uppercase
+      transition: all ease-out 0.3s
+  &-burger
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    height: 17px
+    width: 54px
+    &__line
+      height: 2px
+      width: 100%
+      background-color: $color-primary
+      transition: all ease-out 0.3s
+
+// Mouse over effects
+@media (min-width: 993px)
+  .header
+    &-menu:hover .header-menu__text
+      color: $color-secondary
+      transition: all ease-out 0.3s
+    &-menu:hover .header-burger__line
+      background-color: $color-secondary
+      transition: all ease-out 0.3s
