@@ -4,7 +4,7 @@
   right: 0
   left: 0
   z-index: 98
-  display: none
+  display: flex
   flex-direction: column
   align-items: center
   padding: 58px 0 119px
@@ -15,7 +15,6 @@
   visibility: hidden
   transition: all ease-out 0.3s
   &_active
-    display: flex
     opacity: 1
     visibility: visible
     transition: all ease-out 0.3s
@@ -42,6 +41,8 @@
     transition: all ease-out 0.3s
     &:not(:last-child)
       margin-bottom: 42px
+  &__phone
+    display: none
   &__underline
     position: absolute
     bottom: 15px
@@ -60,3 +61,25 @@
     &__link:hover .menu__underline
       width: 100%
       transition: all ease-out 0.3s
+
+// Responsive
+@media (max-width: 767px)
+  .menu
+    top: 59px
+    height: 92vh
+    &__link
+      font-size: 36px
+      line-height: 53px
+      &:not(:last-child)
+        margin-bottom: 28px
+    &__phone
+      display: flex
+      margin-top: 20px
+@media (max-width: 576px)
+  .menu
+    &-img
+      width: 140px
+      height: 200px
+    &__link
+      font-size: 24px
+      line-height: 36px
