@@ -1,11 +1,13 @@
 .hero
-  &-top
+  // top section
+  &__top
     position: relative
     writing-mode: vertical-lr
     display: flex
     justify-content: flex-end
     height: 692.71px
     width: 100%
+    margin-bottom: 16.29px
   &-image
     position: absolute
     top: 0
@@ -22,8 +24,70 @@
     line-height: 120%
     color: #000
     transform: rotate(180deg)
+  // Bottom section
+  &__title
+    margin: 0 0 21px
+    font-size: 48px
+    line-height: 71px
+  &-form
+    display: flex
+    &__input-group
+      position: relative
+      display: flex
+      align-items: flex-end
+      width: 227px
+      height: 65.5px
+      border-right: 1px solid rgba(0, 0, 0, .5)
+      &:first-child
+        border-left: 1px solid rgba(0, 0, 0, .5)
+    &__hint
+      position: absolute
+      top: 0
+      left: 8px
+      font-style: normal
+      font-weight: normal
+      font-size: 12px
+      line-height: 120%
+      color: #3D3D3D
+      opacity: 0.5
+    &__input
+      width: 100%
+      font-family: 'SangBleu Sunrise', serif
+      font-style: normal
+      font-weight: normal
+      font-size: 18px
+      line-height: 120%
+      border: none
+      outline: none
+      cursor: pointer
+      -moz-appearance: none
+      -webkit-appearance: none
+      appearance: none
+      background: url("../img/input-arrow.svg") no-repeat right center
+      &::-webkit-calendar-picker-indicator
+        opacity: 0
+        cursor: pointer
+    &__select
+      width: 100%
+      padding: 0 8px
+    &__button
+      margin-left: auto
+      color: #ffffff
+      background-color: $color-primary
+
+// Mouseover effects
+@media (min-width: 993px)
+  .button:hover
+    color: #000000
+    background-color: $color-secondary
+    transition: all ease-out 0.3s
 
 // Responsive
+@media ( min-width: 1440px )
+  .hero
+    &-form
+      &__button
+        margin-left: 97px
 @media ( max-width: 1368px )
   .hero
     &-image
@@ -38,7 +102,7 @@
       left: -693px
 @media (max-width: 767px)
   .hero
-    &-top
+    &__top
       height: 392.71px
     &-image
       left: auto

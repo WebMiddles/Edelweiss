@@ -23,11 +23,33 @@ a
 .icon
   width: 100%
   height: 100%
+.button
+  min-width: 227px
+  padding: 18px 65px
+  font-style: normal
+  font-weight: normal
+  font-size: 14px
+  line-height: 120%
+  letter-spacing: 0.025em
+  text-transform: uppercase
+  color: #000000
+  background-color: $color-secondary
+  border: none
+  outline: none
+  cursor: pointer
+  transition: all ease-out 0.3s
 
 // Header, Hero, Footer container
 .container
   max-width: 1320px
   margin: 0 auto
+
+// Mouseover effects
+@media (min-width: 993px)
+  .button:hover
+    color: #ffffff
+    background-color: $color-primary
+    transition: all ease-out 0.3s
 
 // Responsive
 @media ( max-width: 1368px )
