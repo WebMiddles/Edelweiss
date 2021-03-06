@@ -1,0 +1,2 @@
+.hero-top{position:relative;writing-mode:vertical-lr;height:692.71px;width:100%;overflow:hidden}.hero-image{position:absolute;bottom:0;right:133px;height:692.71px;width:1307px}.hero-image__item{width:100%;height:100%;object-fit:cover}.hero__phrase{position:absolute;bottom:0;right:60px;font-size:30px;line-height:120%;color:#000;transform:rotate(180deg)}@media (min-width: 1441px){.hero-top{display:flex;align-items:flex-end;flex-direction:column;max-width:1382px;margin:0 auto}.hero-image{right:71px}.hero__phrase{right:0}}
+/*# sourceMappingURL=!_hero.css.map */
