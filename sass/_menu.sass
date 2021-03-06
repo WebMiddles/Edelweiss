@@ -1,0 +1,62 @@
+.menu
+  position: fixed
+  top: 133px
+  right: 0
+  left: 0
+  z-index: 98
+  display: none
+  flex-direction: column
+  align-items: center
+  padding: 58px 0 119px
+  height: 79vh
+  background-color: #333333
+  overflow: auto
+  opacity: 0
+  visibility: hidden
+  transition: all ease-out 0.3s
+  &_active
+    display: flex
+    opacity: 1
+    visibility: visible
+    transition: all ease-out 0.3s
+  &-img
+    position: absolute
+    top: 62px
+    left: 50%
+    width: 267px
+    height: 341px
+    background: #524534
+    opacity: 0.6
+    overflow: hidden
+    &__item
+      width: 100%
+      height: 100%
+      object-fit: cover
+  &__link
+    position: relative
+    z-index: 99
+    font-size: 45px
+    line-height: 66px
+    color: #FFFFFF
+    opacity: 0.8
+    transition: all ease-out 0.3s
+    &:not(:last-child)
+      margin-bottom: 42px
+  &__underline
+    position: absolute
+    bottom: 15px
+    left: 0
+    width: 0
+    height: 2px
+    background-color: #fff
+    transition: all ease-out 0.3s
+
+// Mouse over effects
+@media (min-width: 993px)
+  .menu
+    &__link:hover
+      opacity: 1
+      transition: all ease-out 0.3s
+    &__link:hover .menu__underline
+      width: 100%
+      transition: all ease-out 0.3s
