@@ -64,5 +64,89 @@
       <a href="tel:+79028900438" class="title menu__link menu__phone">8 902 890 04 38</a>
     </nav>
     <!-- /.menu -->
+
+    <main class="main">
+      <section class="hero">
+        <div class="container">
+          <div class="hero-top">
+            <div class="hero-image">
+              <img
+                src="img/hero.jpg"
+                alt="Фотография зимнего леса с высоты птичьего полета"
+                class="hero-image__item"
+              />
+            </div>
+            <!-- /.hero-image -->
+            <span class="hero-phrase">Счастье не за горами, счастье в горах</span>
+          </div>
+          <!-- /.hero-top -->
+          <div class="hero-bottom">
+            <h1 class="title hero__title">Бронировать сейчас</h1>
+
+            <form class="hero-form">
+              <div class="hero-form__input-group">
+                <label for="check-in" class="hero-form__hint">въезд</label>
+                <input
+                  class="hero-form__input"
+                  type="date"
+                  id="check-in"
+                  name="check-in"
+                  value="2021-10-01"
+                  min="2021-03-01"
+                  max="2021-12-31"
+                />
+              </div>
+              <!-- check-in -->
+
+              <div class="hero-form__input-group">
+                <label for="check-out" class="hero-form__hint">выезд</label>
+                <input
+                  class="hero-form__input"
+                  type="date"
+                  id="check-out"
+                  name="check-out"
+                  value="2021-10-02"
+                  min="2021-03-01"
+                  max="2021-12-31"
+                />
+              </div>
+              <!-- check-out -->
+
+              <div class="hero-form__input-group">
+                <label for="adults" class="hero-form__hint">взрослые</label>
+                <select name="adults" id="adults" class="hero-form__input">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                </select>
+              </div>
+              <!-- adults -->
+
+              <div class="hero-form__input-group">
+                <label for="kids" class="hero-form__hint">взрослые</label>
+                <select name="kids" id="kids" class="hero-form__input">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                </select>
+              </div>
+              <!-- kids -->
+
+              <button class="button hero-form__button">бронировать</button>
+            </form>
+          </div>
+          <!-- /.hero-bottom -->
+        </div>
+        <!-- /.container -->
+      </section>
+      <!-- /.hero -->
+    </main>
+    <!-- /.main -->
   </body>
 </html>
