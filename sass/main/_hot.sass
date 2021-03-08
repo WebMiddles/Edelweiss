@@ -1,1 +1,140 @@
+.main
+  &__hot
+    margin-bottom: 203px
 
+.hot
+  position: relative
+  // background: url("../img/hot-flower.jpg") center top -163px no-repeat
+  &__background
+    position: absolute
+    top: -163px
+    left: 50%
+    z-index: -1
+    width: 308px
+    height: 285px
+    object-fit: contain
+    transform: translateX(-50%)
+  &-wrapper
+    display: flex
+    padding-left: 154px
+  // Left part
+  &__left
+    margin-right: 155px
+  &-image
+    width: 413px
+    height: 502px
+    overflow: hidden
+    &__item
+      width: 100%
+      height: 100%
+      object-fit: cover
+  &__image
+    margin-bottom: 29px
+  &-more
+    padding-right: 37px
+    font-style: normal
+    font-weight: 300
+    font-size: 14px
+    line-height: 159.5%
+    background: url("../img/arrow.svg") right top 5px no-repeat
+    transition: all ease-out 0.3s
+    &__text
+      opacity: 0.7
+  // Right part
+  &__right
+    padding-top: 178px
+  &__title
+    margin: 0 0 122px
+    max-width: 342px
+    font-size: 51.2px
+    line-height: 120%
+  &-card
+    &__title
+      margin: 0 0 27px
+      font-style: normal
+      font-weight: normal
+      font-size: 18px
+      line-height: 120%
+      letter-spacing: 0.025em
+      text-transform: uppercase
+      opacity: 0.9
+    &__text
+      margin: 0 0 6px
+      max-width: 300px
+      font-style: normal
+      font-weight: 300
+      font-size: 14px
+      line-height: 159.5%
+      opacity: 0.7
+    &__note
+      display: block
+      margin: 0 0 12px
+      font-style: normal
+      font-weight: 300
+      font-size: 12px
+      line-height: 140%
+      opacity: 0.5
+    &__link
+      position: relative
+      font-style: normal
+      font-weight: normal
+      font-size: 14px
+      line-height: 120%
+      letter-spacing: 0.025em
+      text-transform: uppercase
+    &__underline
+      position: absolute
+      bottom: 0
+      left: 0
+      width: 100%
+      height: 1px
+      background-color: #000
+      opacity: 0.5
+      transition: all ease-out 0.3s
+
+// Mouse over effects
+@media (min-width: 993px)
+  .hot
+    &-more:hover
+      color: $color-secondary
+      opacity: 0.7
+      transition: all ease-out 0.3s
+    &-card__link:hover .hot-card__underline
+      width: 0
+      opacity: 0
+      transition: all ease-out 0.3s
+
+// Responsive
+@media ( max-width: 1200px )
+  .hot
+    &-wrapper
+      padding-left: 0
+@media (max-width: 992px)
+  .hot
+    &-wrapper
+      flex-direction: column
+    &__left
+      margin-right: 0
+    &__right
+      order: -1
+      padding-top: 0
+      margin-bottom: 70px
+    &__title
+      margin-bottom: 70px
+@media (max-width: 767px)
+  .main
+    &__hot
+      margin-bottom: 150px
+  .hot
+    &__background
+      top: -100px
+      width: 200px
+      height: 185px
+    &-image
+      width: 294px
+      height: 357px
+    &__title
+      margin-bottom: 50px
+      max-width: 300px
+      font-size: 36px
+      line-height: 53px
