@@ -56,9 +56,22 @@
       // transform: translateX(300px)
       transition: all ease-out 0.3s
     &__button
-      display: none
       position: absolute
       z-index: 1
+      top: 203px
+      width: 60px
+      height: 60px
+      border-radius: 50%
+      background-color: $color-primary
+      background-image: url("../img/arrow.svg")
+      background-position: center center
+      background-repeat: no-repeat
+      transition: all ease-out 0.3s
+      &_next
+        left: 846px
+      &_prev
+        left: 79px
+        transform: rotate(180deg)
 
 // Active slide text
 .slider-slide_active
@@ -70,3 +83,12 @@
       &__text
         opacity: 0.7
         // transform: translateX(0px)
+
+// Mouseover effects
+@media (min-width: 993px)
+  .services
+    &-slider
+      &__button
+        &:hover
+          background-color: lighten($color-primary, 10%)
+          transition: all ease-out 0.3s
