@@ -1209,3 +1209,117 @@ a {
     line-height: 53px;
   }
 }
+
+.calendar {
+  width: 300px;
+  height: calc(42.9px * 7 + 50px);
+  background-color: #fff;
+  margin-bottom: 50px;
+}
+
+.calendar__control {
+  width: 100%;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fff;
+  padding: 0 20px;
+  background-color: #524534;
+  color: #fff;
+  font-size: 1.1rem;
+  font-family: "SangBleu Sunrise";
+}
+
+.calendar__button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  width: 40px;
+  height: 13px;
+}
+
+.calendar__button:hover {
+  opacity: 0.7;
+}
+
+.calendar__button-next {
+  background: transparent url("../img/arrow.svg") no-repeat center/contain;
+}
+
+.calendar__button-prev {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  background: transparent url("../img/arrow.svg") no-repeat center/contain;
+}
+
+.calendar__header {
+  width: 100%;
+  height: 42.6px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.calendar__day-name {
+  width: calc(300px / 7);
+  height: 42.6px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #CC9C5C;
+}
+
+.calendar__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.calendar__date {
+  width: calc(300px / 7);
+  height: 42.6px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #E1C9A5;
+}
+
+.calendar__date:hover:not(.calendar__date--empty) {
+  background-color: #524534;
+  color: #fff;
+  cursor: pointer;
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+}
+
+.calendar__date-today {
+  background-color: #524534;
+  color: #fff;
+}

@@ -24,6 +24,20 @@ document.addEventListener("DOMContentLoaded", () => {
         toggleMenu();
       }
     });
+
+    bookingForm.addEventListener("click", (event) => {
+      let target = event.target;
+
+      target = target.closest(".hero-form__input-group");
+
+      if (target) {
+        console.log(event);
+        // const input = target.querySelector("input.hero-form__input");
+        // if (input) {
+
+        // }
+      }
+    });
   };
 
   toggleBurgerMenu();
