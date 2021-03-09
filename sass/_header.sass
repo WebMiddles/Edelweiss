@@ -23,25 +23,19 @@
       line-height: 120%
       text-transform: uppercase
       transition: all ease-out 0.3s
-      &_active
-        color: #fff
-        transition: all ease-out 0.3s
+
   &-burger
     display: flex
     flex-direction: column
     justify-content: space-between
-    height: 14px
+    height: 12px
     width: 54px
+    transition: all ease-out 0.3s
     &__line
       height: 2px
       width: 100%
       background-color: $color-primary
-      transition: all ease-out 0.3s
-      &_active
-        transform: translateY(6px) rotate(20deg)
-        background-color: #fff
-        &:last-child
-          transform: translateY(-6px) rotate(-20deg)
+
   // Logo
   &-logo
     width: 165px
@@ -50,9 +44,7 @@
     background-size: contain
     background-repeat: no-repeat
     transition: all ease-out 0.3s
-    &_active
-      background-image: url("../img/header-logo_active.svg")
-      transition: all ease-out 0.3s
+
   // Info
   &-info
     display: flex
@@ -63,8 +55,6 @@
     line-height: 159.5%
     opacity: 0.5
     transition: all ease-out 0.3s
-    &_active
-      color: #fff
     &__phone
       margin-right: 19px
   &-social
@@ -79,8 +69,26 @@
       fill: #000
       opacity: 0.5
       transition: all ease-out 0.3s
-      &_active
+
+.header-menu_active
+  & .header
+    &-menu
+      &__text
+        color: #fff
+    &-burger
+      transform: rotate(90deg)
+      &__line
+        transform: translateY(5px) rotate(80deg)
+        background-color: #fff
+        &:last-child
+          transform: translateY(-5px) rotate(-80deg)
+    &-info
+      color: #ffffff
+    &-social
+      &__icon
         fill: #fff
+    &-logo
+      background-image: url("../img/header-logo_active.svg")
 
 // Mouse over effects
 @media (min-width: 993px)
