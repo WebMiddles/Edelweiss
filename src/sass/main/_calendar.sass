@@ -1,8 +1,13 @@
 .calendar
+  position: absolute
+  left: 0
+  top: 0
   width: 300px
-  height: calc(42.9px * 7 + 50px)
-  background-color: #fff
+  background-color: $color-secondary
   margin-bottom: 50px
+  display: none
+  &_active
+    display: block
   &__control
     width: 100%
     height: 50px
@@ -41,17 +46,17 @@
     align-items: center
     justify-content: center
     background-color: $color-beige
-  &__row
+  &__days
     display: flex
     flex-wrap: wrap
-  &__date
+  &__day
     width: calc(300px / 7)
     height: 42.6px
     display: flex
     align-items: center
     justify-content: center
     background-color: $color-secondary
-    &:hover:not(.calendar__date--empty)
+    &:hover:not(.calendar__day--empty)
       background-color: $color-primary
       color: #fff
       cursor: pointer
