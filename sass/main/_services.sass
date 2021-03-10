@@ -1,3 +1,8 @@
+.container-slider
+  margin: 0 auto
+  max-width: 1440px
+  width: 100%
+
 .services
   position: relative
   &__background
@@ -20,7 +25,7 @@
     &__background
       position: absolute
       top: 0
-      left: 184px
+      left: 317px
       z-index: -1
       margin: 0
       background-color: $color-secondary
@@ -28,7 +33,7 @@
       margin: 0 77px
       // ВРЕМЕННЫЙ СТИЛЬ ДО АКТИВНОГО СЛАЙДЕРА
       &:first-child
-        margin-left: 154px
+        margin-left: 287px
     &__image
       margin-bottom: 36px
       width: 677px
@@ -68,9 +73,9 @@
       background-repeat: no-repeat
       transition: all ease-out 0.3s
       &_next
-        left: 846px
+        left: 979px
       &_prev
-        left: 79px
+        left: 212px
         transform: rotate(180deg)
 
 // Active slide text
@@ -94,7 +99,26 @@
           transition: all ease-out 0.3s
 
 // Responsive
+@media (max-width: 1200px)
+  .container-slider
+    max-width: 960px
+  .services
+    &-slider
+      &__background
+        left: 184px
+      &__item
+        margin: 0 77px
+        // ВРЕМЕННЫЙ СТИЛЬ ДО АКТИВНОГО СЛАЙДЕРА
+        &:first-child
+          margin-left: 154px
+      &__button
+        &_next
+          left: 846px
+        &_prev
+          left: 79px
 @media (max-width: 992px)
+  .container-slider
+    max-width: 700px
   .services
     &-slider
       &__background
@@ -116,6 +140,8 @@
         &_prev
           right: 120px
 @media (max-width: 767px)
+  .container-slider
+    max-width: 576px
   .services
     &__title
       margin-bottom: 40px
