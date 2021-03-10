@@ -60,11 +60,33 @@ button
   &-wrapper
     position: absolute
     display: flex
+  &-pagination
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin: 0
+    padding: 0
+    list-style: none
+    &__item
+      width: 6px
+      height: 6px
+      border-radius: 50%
+      background-color: $color-secondary
+      transition: all ease-out 0.3s
+      cursor: pointer
+      &:not(:last-child)
+        margin-bottom: 19px
+      &_active
+        width: 10px
+        height: 10px
 
 // Mouseover effects
 @media (min-width: 993px)
   .button:hover
     color: #ffffff
+    background-color: $color-primary
+    transition: all ease-out 0.3s
+  .slider-pagination__item:hover
     background-color: $color-primary
     transition: all ease-out 0.3s
 

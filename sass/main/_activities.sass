@@ -1,0 +1,86 @@
+.activities
+  padding-top: 136px
+  height: 374px
+  background-color: #1C2021
+  &-container
+    position: relative
+  &__title
+    margin: 0
+    max-width: 379px
+    font-size: 48px
+    line-height: 120%
+    color: #FFFFFF
+  &-slider
+    position: absolute
+    top: -576px
+    right: 0
+    z-index: 31
+    width: 1024px
+    height: 814px
+    &__wrapper
+      position: relative
+      width: 100%
+      height: 100%
+    &__item
+      opacity: 0
+      transition: all ease-out 0.3s
+      &_active
+        opacity: 1
+    &__image
+      width: 867px
+      height: 538px
+      object-fit: cover
+    &__card
+      position: absolute
+      bottom: 0
+      left: 261px
+      display: flex
+      padding: 53px 0 100px 127px
+      width: 82.8%
+      background-color: #fff
+    &__title
+      margin: 0 0 38px
+      font-style: normal
+      font-weight: normal
+      font-size: 18px
+      line-height: 120%
+      letter-spacing: 0.025em
+      text-transform: uppercase
+    &__text
+      margin: 0 134px 0 0
+      max-width: 480px
+      height: 144px
+      font-style: normal
+      font-weight: normal
+      font-size: 14px
+      line-height: 159.5%
+      color: #000000
+      opacity: 0.7
+    &__page
+      display: flex
+      justify-content: center
+      writing-mode: vertical-rl
+      transform: rotate(180deg)
+
+  &-pagination
+    position: absolute
+    top: 166px
+    right: 0
+
+// Mouseover effects
+@media (min-width: 993px)
+  .activities
+    &-slider
+      &__button:hover
+        color: #fff
+        background-color: $color-primary
+        transition: all ease-out 0.3s
+
+// responsive
+@media (min-width: 1440px)
+  .activities
+    &-slider
+      &__card
+        width: 892px
+@media (max-width: 1368px)
+  .activities
