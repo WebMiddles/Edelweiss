@@ -1,0 +1,64 @@
+.footer
+  padding: 67px 0
+  background: url("../img/footer-background.jpg") no-repeat
+  // Elements styles & margins
+  &__title
+    margin: 0 0 36px
+    font-style: normal
+    font-weight: normal
+    font-size: 48px
+    line-height: 120%
+    text-align: center
+    color: $color-orange
+  &__form
+    margin-bottom: 113px
+    margin-left: auto
+  // Form styles
+  &-form
+    width: 867px
+    &__text
+      margin: 0 0 33px
+      font-style: normal
+      font-weight: normal
+      font-size: 18px
+      line-height: 120%
+      color: #fff
+    &__input-group
+      display: flex
+      width: 100%
+      margin-bottom: 26px
+      &:last-of-type
+        margin-bottom: 41px
+    &__input
+      padding-left: 43.2px
+      flex-basis: 100%
+      height: 67px
+      border: none
+      color: #000
+      background-color: $color-secondary
+      &::placeholder
+        font-style: normal
+        font-weight: normal
+        font-size: 14px
+        line-height: 120%
+        opacity: 0.7
+    &__select
+      appearance: none
+      cursor: pointer
+    &__button
+      width: 336px
+      height: 67px
+
+// Mouseover effects
+@media(min-width: 993px)
+  .footer
+    &-form
+      &__button:hover
+        color: #fff
+        background-color: $color-primary
+        transition: all ease-out 0.3s
+// responsive
+@media (max-width: 1368px)
+  .footer
+    &-form
+      width: 800px
