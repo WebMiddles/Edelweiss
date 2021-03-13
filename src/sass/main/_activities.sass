@@ -1,0 +1,170 @@
+.activities
+  padding-top: 136px
+  height: 374px
+  background-color: #1C2021
+  &-container
+    position: relative
+  &__title
+    margin: 0
+    max-width: 379px
+    font-size: 48px
+    line-height: 120%
+    color: #FFFFFF
+  &-slider
+    position: absolute
+    top: -576px
+    right: 0
+    z-index: 31
+    width: 1024px
+    height: 814px
+    &__wrapper
+      position: relative
+      width: 100%
+      height: 100%
+    &__item
+      opacity: 0
+      transition: all ease-out 0.3s
+      &_active
+        opacity: 1
+    &__image
+      width: 867px
+      height: 538px
+      object-fit: cover
+    &__card
+      position: absolute
+      bottom: 0
+      left: 261px
+      display: flex
+      padding: 53px 0 100px 127px
+      width: 82.8%
+      min-height: 374px
+      background-color: #fff
+    &__title
+      margin: 0 0 38px
+      font-style: normal
+      font-weight: normal
+      font-size: 18px
+      line-height: 120%
+      letter-spacing: 0.025em
+      text-transform: uppercase
+    &__text
+      margin: 0 134px 40px 0
+      max-width: 480px
+      font-style: normal
+      font-weight: normal
+      font-size: 14px
+      line-height: 159.5%
+      color: #000000
+      opacity: 0.7
+    &__page
+      display: flex
+      justify-content: center
+      writing-mode: vertical-rl
+      transform: rotate(180deg)
+    &__page-number
+      font-size: 18px
+      line-height: 120%
+      color: #CC9C5C
+
+  &-pagination
+    position: absolute
+    top: 166px
+    right: 0
+
+// Mouseover effects
+@media (min-width: 993px)
+  .activities
+    &-slider
+      &__button:hover
+        color: #fff
+        background-color: $color-primary
+        transition: all ease-out 0.3s
+
+// responsive
+@media (min-width: 1440px)
+  .activities
+    &-slider
+      &__card
+        width: 892px
+@media (max-width: 1352px)
+  .activities
+    &-slider
+      &__card
+        width: 75.4%
+@media (max-width: 1200px)
+  .activities
+    height: auto
+    &__title
+      margin-bottom: 97px
+    &-slider
+      position: relative
+      top: auto
+      right: auto
+      width: 100%
+      &__card
+        left: auto
+        right: 0
+        width: auto
+        padding-right: 57px
+@media (max-width: 992px)
+  .activities
+    &-slider
+      height: 754px
+      &__image
+        width: 660px
+        height: 410px
+      &__card
+        padding-left: 67px
+        padding-right: 27px
+        padding-bottom: 61px
+        width: 92%
+@media (max-width: 767px)
+  .activities
+    padding-top: 96px
+    &__title
+      margin-bottom: 50px
+      font-size: 36px
+      line-height: 53px
+    &-slider
+      height: auto
+      &__image
+        width: 100%
+        height: 357px
+      &__card
+        position: relative
+        bottom: 10px
+        width: auto
+        padding-right: 67px
+      &__text
+        max-width: none
+        margin-right: 0
+      &__page
+        display: none
+    &-pagination
+      top: 65%
+      right: 30px
+@media (max-width: 576px)
+  .activities
+    &__title
+      font-size: 26px
+      line-height: 38px
+    &-slider
+      &__image
+        height: 297px
+@media (max-width: 440px)
+  .activities
+    &-slider
+      &__image
+        height: 242px
+      &__card
+        padding-left: 27px
+        padding-right: 37px
+      &__button
+        display: block
+        min-width: none
+        width: 100%
+        text-align: center
+        padding: 18px 30px
+    &-pagination
+      top: 50%
+      right: 20px

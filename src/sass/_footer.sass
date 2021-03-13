@@ -1,0 +1,162 @@
+.footer
+  padding: 67px 0
+  background: url("../img/footer-background.jpg") no-repeat
+  // Elements styles & margins
+  &__title
+    margin: 0 0 36px
+    font-style: normal
+    font-weight: normal
+    font-size: 48px
+    line-height: 120%
+    text-align: center
+    color: $color-orange
+  &__form
+    margin-bottom: 113px
+    margin-left: auto
+
+  // Form styles
+  &-form
+    width: 867px
+    &__text
+      margin: 0 0 33px
+      font-style: normal
+      font-weight: normal
+      font-size: 18px
+      line-height: 120%
+      color: #fff
+    &__input-group
+      display: flex
+      width: 100%
+      margin-bottom: 26px
+      &:last-of-type
+        margin-bottom: 41px
+    &__input
+      padding-left: 43.2px
+      flex-basis: 100%
+      height: 67px
+      border: none
+      font-size: 14px
+      line-height: 120%
+      color: #000
+      background-color: $color-secondary
+      &::placeholder
+        font-style: normal
+        font-weight: normal
+        opacity: 0.7
+    &__select
+      appearance: none
+      cursor: pointer
+    &__button
+      width: 336px
+      height: 67px
+
+  // Navbar styles
+  &-nav
+    display: flex
+    justify-content: space-between
+    &__logo
+      margin-right: 60px
+      width: 165px
+      height: 62px
+      background-image: url("../img/footer-logo.svg")
+      background-size: contain
+      background-repeat: no-repeat
+    &__title
+      margin-bottom: 23px
+      font-size: 18px
+      line-height: 120%
+      text-transform: uppercase
+      color: $color-secondary
+    &__text
+      font-style: normal
+      font-weight: normal
+      font-size: 10px
+      line-height: 159.5%
+      color: #fff
+  &-address
+    max-width: 177px
+  &-social
+    &__link
+      &:not(:last-child)
+        margin-right: 21px
+    &__icon
+      width: 34px
+      height: 34px
+      fill: #fff
+      opacity: 0.5
+
+// Mouseover effects
+@media(min-width: 993px)
+  .footer
+    &-form
+      &__button:hover
+        color: #fff
+        background-color: $color-primary
+        transition: all ease-out 0.3s
+    &-nav
+      &__link:hover
+        color: $color-secondary
+        transition: all ease-out 0.3s
+    &-social
+      &__icon:hover
+        opacity: 1
+        fill: $color-secondary
+        transition: all ease-out 0.3s
+
+// responsive
+@media (max-width: 1368px)
+  .footer
+    &-form
+      width: 800px
+    &-nav
+      &__logo
+        margin-right: 0
+
+@media (max-width: 1200px)
+  .footer
+    &-form
+      margin-left: auto
+      margin-right: auto
+    &-nav
+      flex-wrap: wrap
+      &__logo
+        flex-basis: 100%
+        margin-bottom: 43px
+@media (max-width: 992px)
+  .footer
+    &-form
+      width: 100%
+    &-nav
+      &__cell
+        &:not(:last-of-type)
+          margin-bottom: 43px
+@media (max-width: 767px)
+  .footer
+    &__title
+      font-size: 36px
+      line-height: 53px
+    &-nav
+      justify-content: flex-start
+      &__cell
+        margin-right: 58px
+@media (max-width: 576px)
+  .footer
+    &__title
+      font-size: 26px
+      line-height: 38px
+    &-form
+      &__text
+        text-align: center
+    &-nav
+      flex-direction: column
+      &__logo
+        flex-basis: auto
+      &__title
+        margin-bottom: 13px
+@media (max-width: 440px)
+  .footer
+    &-form
+      &__input
+        padding-left: 15px
+      &__button
+        width: 100%

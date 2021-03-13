@@ -1,0 +1,44 @@
+.address
+  display: flex
+  justify-content: center
+  margin: -75px auto 0
+  padding-bottom: 155px
+  height: 539px
+  max-width: 1350px
+  background: url("../img/address.jpg") center center no-repeat
+  &__text
+    margin-top: auto
+    max-width: 350px
+    font-size: 18px
+    line-height: 159.5%
+    color: $color-orange
+
+.main__address
+  margin-bottom: 476px
+
+// responsive
+@media (max-width: 1350px)
+  .address
+    background-size: 960px 383px
+@media (max-width: 1200px)
+  .main__address
+    margin-bottom: 50px
+@media (max-width: 992px)
+  .address
+    background-size: 768px 307px
+@media (max-width: 767px)
+  .main__address
+    margin-bottom: 0
+  .address
+    height: 436px
+    padding-bottom: 120px
+    background-size: 650px 260px
+@media (max-width: 380px)
+  .address
+    height: 338px
+    background-size: 350px 140px
+    &__text
+      margin: auto auto 0
+      width: 92%
+      text-align: center
+      font-size: 14px

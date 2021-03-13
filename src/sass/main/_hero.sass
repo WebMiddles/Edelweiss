@@ -1,0 +1,154 @@
+.main
+  &__hero
+    margin-bottom: 205px
+
+.hero
+
+  // top section
+  &__top
+    position: relative
+    writing-mode: vertical-lr
+    display: flex
+    justify-content: flex-end
+    height: 692.71px
+    width: 100%
+    margin-bottom: 16.29px
+  &-image
+    position: absolute
+    top: 0
+    left: -73px
+    height: 692.71px
+    width: 1307px
+    &__item
+      width: 100%
+      height: 100%
+      filter: sepia(40%) hue-rotate(90deg)
+      object-fit: cover
+  &__phrase
+    font-size: 30px
+    line-height: 120%
+    color: #000
+    transform: rotate(180deg)
+
+  // Bottom section
+  &__title
+    margin: 0 0 21px
+    font-size: 48px
+    line-height: 71px
+  &-form
+    display: flex
+    &__input-group
+      position: relative
+      display: flex
+      align-items: flex-end
+      width: 227px
+      height: 65.5px
+      border-right: 1px solid rgba(0, 0, 0, .5)
+      &:first-child
+        border-left: 1px solid rgba(0, 0, 0, .5)
+    &__hint
+      position: absolute
+      top: 0
+      left: 8px
+      font-style: normal
+      font-weight: normal
+      font-size: 12px
+      line-height: 120%
+      color: #3D3D3D
+      opacity: 0.5
+    &__input
+      width: 100%
+      font-family: 'SangBleu Sunrise', serif
+      font-style: normal
+      font-weight: normal
+      font-size: 18px
+      line-height: 120%
+      border: none
+      outline: none
+      cursor: pointer
+      -moz-appearance: none
+      -webkit-appearance: none
+      appearance: none
+      background: url("../img/input-arrow.svg") no-repeat right center
+      &::-webkit-calendar-picker-indicator
+        opacity: 0
+        cursor: pointer
+    &__select
+      width: 100%
+      padding: 0 8px
+    &__button
+      margin-left: auto
+      color: #ffffff
+      background-color: $color-primary
+
+// Mouseover effects
+@media (min-width: 993px)
+  .button:hover
+    color: #000000
+    background-color: $color-secondary
+    transition: all ease-out 0.3s
+
+// Responsive
+@media ( min-width: 1440px )
+  .hero
+    &-form
+      &__button
+        margin-left: 97px
+@media ( max-width: 1368px )
+  .hero
+    &-image
+      left: -203px
+@media (max-width: 1200px)
+  .hero
+    &-image
+      left: -433px
+@media (max-width: 992px)
+  .hero
+    &-image
+      left: -693px
+    &-form
+      flex-direction: column
+      max-width: 427px
+      &__input-group
+        width: 100%
+        margin-bottom: 25px
+        border-right: none
+        border-bottom: 1px solid rgba(0, 0, 0, .5)
+        &:first-child
+          border-left: none
+      &__select
+        padding: 0 8px 4px
+      &__button
+        margin-left: 0
+@media (max-width: 767px)
+  .main
+    &__hero
+      margin-bottom: 150px
+  .hero
+    padding-top: 15px
+    &__top
+      height: 392.71px
+    &-image
+      left: auto
+      right: 12%
+      height: 392.71px
+    &__phrase
+      font-size: 18px
+    &__title
+      font-size: 36px
+      line-height: 53px
+@media (max-width: 576px)
+  .hero
+    &__top
+      margin-bottom: 30px
+    &__title
+      font-size: 26px
+      line-height: 38px
+@media (max-width: 420px)
+  .hero
+    &-image
+      left: auto
+      right: -5%
+      height: 392.71px
+    &__phrase
+      display: none
