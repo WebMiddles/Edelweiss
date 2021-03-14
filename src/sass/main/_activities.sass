@@ -23,24 +23,31 @@
       height: 100%
     &__item
       opacity: 0
+      position: absolute
+      left: 0
+      top: 0
       transition: all ease-out 0.3s
       &_active
         opacity: 1
+    &__info
+      display: flex
+      flex-direction: column
+      align-items: flex-start
     &__image
       width: 867px
       height: 538px
       object-fit: cover
     &__card
       position: absolute
-      bottom: 0
+      bottom: -270px
       left: 261px
       display: flex
-      padding: 53px 0 100px 127px
-      width: 82.8%
-      min-height: 374px
+      padding: 53px 0 70px 127px
+      width: 95%
+      height: 374px
       background-color: #fff
     &__title
-      margin: 0 0 38px
+      margin: 0 0 38px 0
       font-style: normal
       font-weight: normal
       font-size: 18px
@@ -48,7 +55,7 @@
       letter-spacing: 0.025em
       text-transform: uppercase
     &__text
-      margin: 0 134px 40px 0
+      margin: 0 0 auto 0
       max-width: 480px
       font-style: normal
       font-weight: normal
@@ -61,6 +68,7 @@
       justify-content: center
       writing-mode: vertical-rl
       transform: rotate(180deg)
+      margin-left: 138px
     &__page-number
       font-size: 18px
       line-height: 120%
@@ -88,9 +96,13 @@
         width: 892px
 @media (max-width: 1352px)
   .activities
+    &-pagination
+      margin-right: 60px
     &-slider
       &__card
-        width: 75.4%
+        width: 89%
+      &__page
+        margin-left: 75px
 @media (max-width: 1200px)
   .activities
     height: auto
@@ -102,12 +114,13 @@
       right: auto
       width: 100%
       &__card
-        left: auto
-        right: 0
-        width: auto
-        padding-right: 57px
+        right: auto
+        padding-right: 50px
+        width: 80%
 @media (max-width: 992px)
   .activities
+    &-pagination
+      margin-right: 0
     &-slider
       height: 754px
       &__image
@@ -117,24 +130,32 @@
         padding-left: 67px
         padding-right: 27px
         padding-bottom: 61px
-        width: 92%
+        left: 15%
+        width: 95%
 @media (max-width: 767px)
   .activities
     padding-top: 96px
+    padding-bottom: 720px
     &__title
       margin-bottom: 50px
       font-size: 36px
       line-height: 53px
+    &-pagination
+      display: none
     &-slider
       height: auto
+      &__title
+        margin-bottom: 20px
       &__image
         width: 100%
         height: 357px
       &__card
         position: relative
+        left: 0
         bottom: 10px
         width: auto
         padding-right: 67px
+        height: 380px
       &__text
         max-width: none
         margin-right: 0
@@ -145,20 +166,24 @@
       right: 30px
 @media (max-width: 576px)
   .activities
+    padding-bottom: 465px
     &__title
       font-size: 26px
       line-height: 38px
     &-slider
       &__image
         height: 297px
+      &__text
+        display: none
+      &__card
+        padding: 30px
+        height: auto
 @media (max-width: 440px)
   .activities
+    padding-bottom: 410px
     &-slider
       &__image
         height: 242px
-      &__card
-        padding-left: 27px
-        padding-right: 37px
       &__button
         display: block
         min-width: none
