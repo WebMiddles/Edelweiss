@@ -1,7 +1,6 @@
 const activitiesSlider = () => {
   const slider = document.querySelector(".activities-slider"),
     slide = slider.querySelectorAll(".activities-slider__item");
-  console.log(slide);
 
   let currentSlide = 0,
     interval;
