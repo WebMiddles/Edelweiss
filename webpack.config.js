@@ -47,19 +47,23 @@ module.exports = {
     new CopyWebpackPlugin({
       patterns: [
         {
-          from: path.resolve(__dirname, "src/img/*.jpg"),
+          from: path.resolve(__dirname, "src/img/*.jpg").replace(/\\/g, "/"),
           to: path.resolve(__dirname, "./public/"),
         },
         {
-          from: path.resolve(__dirname, "src/img/activities-slider/*.jpg"),
+          from: path
+            .resolve(__dirname, "src/img/activities-slider/*.jpg")
+            .replace(/\\/g, "/"),
           to: path.resolve(__dirname, "./public/"),
         },
         {
-          from: path.resolve(__dirname, "src/img/services-slider/*.jpg"),
+          from: path
+            .resolve(__dirname, "src/img/services-slider/*.jpg")
+            .replace(/\\/g, "/"),
           to: path.resolve(__dirname, "./public/"),
         },
         {
-          from: path.resolve(__dirname, "src/img/*.png"),
+          from: path.resolve(__dirname, "src/img/*.png").replace(/\\/g, "/"),
           to: path.resolve(__dirname, "./public/"),
         },
         {
