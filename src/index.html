@@ -542,6 +542,7 @@
               type="text"
               class="footer-form__input"
               placeholder="Ваше имя"
+              required
             />
           </div>
           <!-- /.footer-form__input-group -->
@@ -551,25 +552,19 @@
               type="tel"
               class="footer-form__input"
               placeholder="Ваш телефон"
+              required
             />
           </div>
           <!-- /.footer-form__input-group -->
 
           <div class="footer-form__input-group">
-            <select
+            <textarea
               name="footer-question"
               id="footer-question"
-              class="footer-form__input footer-form__select"
-            >
-              <option value="" disabled selected hidden>
-                Выберете интересующий Вас вопрос
-              </option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-            </select>
+              class="footer-form__input footer-form__textarea"
+              placeholder="Введите интересующий Вас вопрос"
+              required
+            ></textarea>
           </div>
           <!-- /.footer-form__input-group -->
 
