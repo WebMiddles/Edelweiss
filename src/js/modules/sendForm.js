@@ -62,6 +62,9 @@ const sendForm = () => {
     const target = event.target;
 
     if (target.matches("#questionForm") && validate()) {
+      requestStatusMessage.classList.add("success");
+      requestStatusMessage.textContent = "Подождите, идет отправка...";
+
       const formData = new FormData(target);
       const body = {};
 
@@ -71,7 +74,7 @@ const sendForm = () => {
 
       console.log(body);
 
-      postData(body).then(showSuccess).then(target.reset()).catch(showError);
+      postData(body).then(showSuccess).catch(showError);
     }
   });
 
@@ -86,9 +89,13 @@ const sendForm = () => {
       requestStatusMessage.classList.remove("success");
       requestStatusMessage.textContent = "";
     }, 2000);
+    questionForm.reset();
   }
 
   function showError() {
+    if (requestStatusMessage.classList.contains("success")) {
+      requestStatusMessage.classList.remove("success");
+    }
     requestStatusMessage.classList.add("error");
     requestStatusMessage.textContent =
       "При отправке произошла ошибка, попробуйте повторить позже.";
