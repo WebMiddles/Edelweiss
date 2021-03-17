@@ -63,15 +63,17 @@
       flex-shrink: 0
       &-container
         display: flex
-        flex-wrap: wrap
     &__requestStatus
       width: 100%
-      padding-left: 43.2px
       display: flex
       align-items: center
       background-color: $color-secondary
       transition: all ease-out 0.3s
       opacity: 0
+      padding: 18px 44px;
+      font-size: 14px;
+      line-height: 120%;
+      min-height: 67px;
 
   // Navbar styles
   &-nav
@@ -155,6 +157,14 @@
           margin-bottom: 43px
 @media (max-width: 767px)
   .footer
+    &-form
+      &__button
+        width: 100%
+        margin-bottom: 26px
+        &-container
+          flex-wrap: wrap
+      &__requestStatus
+        justify-content: center
     &__title
       font-size: 36px
       line-height: 53px
