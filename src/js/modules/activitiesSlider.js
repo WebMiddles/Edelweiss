@@ -51,7 +51,7 @@ const activitiesSlider = () => {
     nextSlide(dot, currentSlide, "slider-pagination__item_active");
   };
 
-  const startSlide = (time = 4000) => {
+  const startSlide = (time = 8000) => {
     interval = setInterval(autoPlaySlide, time);
   };
 
@@ -115,7 +115,7 @@ const activitiesSlider = () => {
 
   slide[0].classList.add("activities-slider__item_active");
 
-  startSlide(4000);
+  startSlide(8000);
 };
 
 export default activitiesSlider;

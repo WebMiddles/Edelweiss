@@ -33,6 +33,7 @@ module.exports = {
     open: true,
     port: 3000,
     hot: false,
+    writeToDisk: true,
   },
   target: isProd ? "browserslist" : "web",
   devtool: isDevFunc(),
@@ -69,6 +70,10 @@ module.exports = {
         {
           from: path.resolve(__dirname, "src/img/sprite.svg"),
           to: path.resolve(__dirname, "./public/img"),
+        },
+        {
+          from: path.resolve(__dirname, "./server.php"),
+          to: path.resolve(__dirname, "./public/"),
         },
       ],
     }),

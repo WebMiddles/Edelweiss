@@ -28,6 +28,7 @@
       display: flex
       width: 100%
       margin-bottom: 26px
+      position: relative
       &:last-of-type
         margin-bottom: 41px
     &__input
@@ -49,9 +50,27 @@
       outline: none
       resize: none
       overflow: auto
+    &__error
+      position: absolute
+      bottom: 3px
+      left: 5%
+      color: red
+      font-size: 14px
     &__button
       width: 336px
       height: 67px
+      margin-right: 20px
+      flex-shrink: 0
+      &-container
+        display: flex
+    &__requestStatus
+      width: 100%
+      padding-left: 43.2px
+      display: flex
+      align-items: center
+      background-color: $color-secondary
+      transition: all ease-out 0.3s
+      opacity: 0
 
   // Navbar styles
   &-nav

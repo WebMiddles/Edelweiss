@@ -532,7 +532,12 @@
       <div class="container">
         <h2 class="title title_vertical footer__title">Остались вопросы?</h2>
 
-        <form class="footer-form footer__form">
+        <form
+          action="#"
+          method="POST"
+          id="questionForm"
+          class="footer-form footer__form"
+        >
           <p class="footer-form__text">
             Оставьте вашу заявку здесь и наш менеджер свяжется с Вами
           </p>
@@ -542,33 +547,55 @@
               type="text"
               class="footer-form__input"
               placeholder="Ваше имя"
-              required
+              name="userName"
+              id="userName"
             />
+            <label
+              for="userName"
+              id="nameError"
+              class="footer-form__error"
+            ></label>
           </div>
           <!-- /.footer-form__input-group -->
 
           <div class="footer-form__input-group">
             <input
               type="tel"
+              name="userPhone"
+              id="userPhone"
               class="footer-form__input"
               placeholder="Ваш телефон"
-              required
             />
+            <label
+              for="userPhone"
+              id="phoneError"
+              class="footer-form__error"
+            ></label>
           </div>
           <!-- /.footer-form__input-group -->
 
           <div class="footer-form__input-group">
             <textarea
-              name="footer-question"
-              id="footer-question"
+              id="userQuestion"
+              name="userQuestion"
               class="footer-form__input footer-form__textarea"
               placeholder="Введите интересующий Вас вопрос"
-              required
             ></textarea>
+            <label
+              for="userQuestion"
+              id="questionError"
+              class="footer-form__error"
+            ></label>
           </div>
           <!-- /.footer-form__input-group -->
 
-          <button class="button footer-form__button">отправить заявку</button>
+          <div class="footer-form__button-container">
+            <button type="submit" class="button footer-form__button">
+              отправить заявку
+            </button>
+            <div class="footer-form__requestStatus"></div>
+          </div>
+          <!-- /.footer-form__button-container -->
         </form>
         <!-- /.footer-form -->
 
